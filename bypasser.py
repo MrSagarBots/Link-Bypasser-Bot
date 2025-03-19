@@ -2247,7 +2247,7 @@ def tnshort(url):
     url = url[:-1] if url[-1] == "/" else url
     code = url.split("/")[-1]
     final_url = f"{DOMAIN}/{code}"
-    ref = "https://knowstuff.in/"
+    ref = "https://movies.djnonstopmusic.in/"
     h = {"referer": ref}
     resp = client.get(final_url, headers=h)
     soup = BeautifulSoup(resp.content, "html.parser")
@@ -2272,7 +2272,7 @@ def tnvalue(url):
     url = url[:-1] if url[-1] == "/" else url
     code = url.split("/")[-1]
     final_url = f"{DOMAIN}/{code}"
-    ref = "https://earnme.club/"
+    ref = "https://ladkibahin.com/"
     h = {"referer": ref}
     resp = client.get(final_url, headers=h)
     soup = BeautifulSoup(resp.content, "html.parser")
@@ -2428,13 +2428,13 @@ def thinfi(url: str) -> str:
 # kingurl
 
 
-def kingurl(url):
+def kingurl1(url):
     client = cloudscraper.create_scraper(allow_brotli=False)
     DOMAIN = "https://go.kingurl.in/"
     url = url[:-1] if url[-1] == "/" else url
     code = url.split("/")[-1]
     final_url = f"{DOMAIN}/{code}"
-    ref = "https://earnbox.best-mobilegames.com/"
+    ref = "https://earnbox.bankshiksha.in/"
     h = {"referer": ref}
     resp = client.get(final_url, headers=h)
     soup = BeautifulSoup(resp.content, "html.parser")
@@ -2449,6 +2449,12 @@ def kingurl(url):
         return "Something went wrong :("
 
 
+def kingurl(url):
+    DOMAIN = "https://earn.bankshiksha.in/click.php?LinkShortUrlID"
+    url = url[:-1] if url[-1] == "/" else url
+    code = url.split("/")[-1]
+    final_url = f"{DOMAIN}={code}"
+    return final_url
 #####################################################################################################
 # helpers
 
